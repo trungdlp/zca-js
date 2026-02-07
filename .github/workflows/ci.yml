@@ -1,12 +1,15 @@
-name: lint
+name: CI
 
 on:
     pull_request:
         branches:
             - main
+    push:
+        branches:
+            - main
 
 jobs:
-    lint:
+    build-and-lint:
         runs-on: ubuntu-latest
         permissions:
             contents: read
@@ -17,6 +20,7 @@ jobs:
               uses: actions/setup-node@v4
               with:
                   node-version: "18.x"
+                  cache: "npm"
             - run: npm install
-            - run: npm run build:clean && npm run build:esm && npm run build:cjs
+            - run: npm run build
             - run: npm run lint
