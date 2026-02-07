@@ -27,7 +27,7 @@
 ## Installation
 
 ```bash
-bun add zca-js # or npm install zca-js
+bun add @trungdlp/zca-js # or npm install @trungdlp/zca-js
 ```
 
 ### Migrate to V2
@@ -41,7 +41,7 @@ bun add sharp # or npm install sharp
 ```
 
 ```javascript
-import { Zalo } from "zca-js";
+import { Zalo } from "@trungdlp/zca-js";
 import sharp from "sharp";
 import fs from "node:fs";
 
@@ -73,7 +73,7 @@ See [API Documentation](https://zca-js.tdung.com) for more details.
 ### Login
 
 ```javascript
-import { Zalo } from "zca-js";
+import { Zalo } from "@trungdlp/zca-js";
 
 const zalo = new Zalo();
 const api = await zalo.loginQR();
@@ -82,7 +82,7 @@ const api = await zalo.loginQR();
 ### Listen for new messages
 
 ```javascript
-import { Zalo, ThreadType } from "zca-js";
+import { Zalo, ThreadType } from "@trungdlp/zca-js";
 
 const zalo = new Zalo();
 const api = await zalo.loginQR();
@@ -115,7 +115,7 @@ api.listener.start();
 ### Send a message
 
 ```javascript
-import { Zalo, ThreadType } from "zca-js";
+import { Zalo, ThreadType } from "@trungdlp/zca-js";
 
 const zalo = new Zalo();
 const api = await zalo.loginQR();
