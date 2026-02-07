@@ -1,6 +1,6 @@
 {
     "name": "@trungdlp/zca-js",
-    "version": "2.0.5",
+    "version": "2.0.6",
     "description": "Unofficial Zalo API for JavaScript",
     "main": "dist/index.js",
     "type": "module",
